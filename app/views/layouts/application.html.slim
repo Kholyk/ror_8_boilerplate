@@ -18,10 +18,12 @@ html.h-100
     link rel="icon" href="/icon.svg" type="image/svg+xml"
     link rel="apple-touch-icon" href="/icon.png"
 
-    / Includes all stylesheet files in app/assets/stylesheets 
-    = stylesheet_link_tag :app, "data-turbo-track": "reload" 
-    = javascript_include_tag "application", "data-turbo-track": "reload", type: "module" 
+    / Includes all stylesheet files in app/assets/stylesheets
+    = stylesheet_link_tag :app, 'data-turbo-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbo-track': 'reload', type: 'module'
+    - # rubocop:disable Rails/OutputSafety
     = Sentry.get_trace_propagation_meta.html_safe
+    - # rubocop:enable Rails/OutputSafety
 
   body.d-flex.flex-column.h-100
     = render 'layouts/navbar'
@@ -29,7 +31,7 @@ html.h-100
       .container
 
         = render 'layouts/alert' if alert
-        = render 'layouts/notice'if notice
+        = render 'layouts/notice' if notice
 
         = yield
 
