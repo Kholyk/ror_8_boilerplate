@@ -4,8 +4,6 @@ source "https://rubygems.org"
 gem "rails", "~> 8.0.1"
 # The modern asset pipeline for Rails [https://github.com/rails/propshaft]
 gem "propshaft"
-# Use sqlite3 as the database for Active Record
-gem "sqlite3", ">= 2.1"
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", ">= 5.0"
 # Bundle and transpile JavaScript [https://github.com/rails/jsbundling-rails]
@@ -36,6 +34,11 @@ gem "bootsnap", require: false
 # Deploy this application anywhere as a Docker container [https://kamal-deploy.org]
 gem "kamal", require: false
 
+# Sentry error tracking and monitoring (sentry.io)
+gem "stackprof"
+gem "sentry-ruby"
+gem "sentry-rails"
+
 # Add HTTP asset caching/compression and X-Sendfile acceleration to Puma [https://github.com/basecamp/thruster/]
 gem "thruster", require: false
 
@@ -43,6 +46,8 @@ gem "thruster", require: false
 # gem "image_processing", "~> 1.2"
 
 group :development, :test do
+  # Use sqlite3 as the database for Active Record
+  gem "sqlite3", ">= 2.1"
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
 
