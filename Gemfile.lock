@@ -295,6 +295,13 @@ GEM
     sentry-ruby (5.22.4)
       bigdecimal
       concurrent-ruby (~> 1.0, >= 1.0.2)
+    slim (5.2.1)
+      temple (~> 0.10.0)
+      tilt (>= 2.1.0)
+    slim_lint (0.31.1)
+      rexml (~> 3.2)
+      rubocop (>= 1.0, < 2.0)
+      slim (>= 3.0, < 6.0)
     solid_cable (3.0.7)
       actioncable (>= 7.2)
       activejob (>= 7.2)
@@ -330,12 +337,14 @@ GEM
     stimulus-rails (1.3.4)
       railties (>= 6.0.0)
     stringio (3.1.5)
+    temple (0.10.3)
     thor (1.3.2)
     thruster (0.1.11)
     thruster (0.1.11-aarch64-linux)
     thruster (0.1.11-arm64-darwin)
     thruster (0.1.11-x86_64-darwin)
     thruster (0.1.11-x86_64-linux)
+    tilt (2.6.0)
     timeout (0.4.3)
     turbo-rails (2.0.11)
       actionpack (>= 6.0.0)
@@ -385,10 +394,12 @@ DEPENDENCIES
   propshaft
   puma (>= 5.0)
   rails (~> 8.0.1)
+  rubocop-rails
   rubocop-rails-omakase
   selenium-webdriver
   sentry-rails
   sentry-ruby
+  slim_lint
   solid_cable
   solid_cache
   solid_queue
