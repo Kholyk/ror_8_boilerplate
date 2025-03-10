@@ -41,6 +41,9 @@ gem 'sentry-rails'
 gem 'sentry-ruby'
 gem 'stackprof'
 
+# Heartcombo Simple Form
+gem 'simple_form'
+
 # Slim template engine for rails
 gem 'slim-rails'
 
