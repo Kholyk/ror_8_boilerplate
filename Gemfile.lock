@@ -127,6 +127,8 @@ GEM
       activesupport (>= 6.1)
     i18n (1.14.7)
       concurrent-ruby (~> 1.0)
+    i18n-debug (1.2.0)
+      i18n (< 2)
     io-console (0.8.0)
     irb (1.15.1)
       pp (>= 0.6.0)
@@ -251,6 +253,9 @@ GEM
     rails-html-sanitizer (1.6.2)
       loofah (~> 2.21)
       nokogiri (>= 1.15.7, != 1.16.7, != 1.16.6, != 1.16.5, != 1.16.4, != 1.16.3, != 1.16.2, != 1.16.1, != 1.16.0.rc1, != 1.16.0)
+    rails-i18n (8.0.1)
+      i18n (>= 0.7, < 2)
+      railties (>= 8.0.0, < 9)
     railties (8.0.1)
       actionpack (= 8.0.1)
       activesupport (= 8.0.1)
@@ -416,6 +421,7 @@ DEPENDENCIES
   debug
   devise (~> 4.9)
   faker
+  i18n-debug
   jbuilder
   jsbundling-rails
   kamal
@@ -423,6 +429,7 @@ DEPENDENCIES
   propshaft
   puma (>= 5.0)
   rails (~> 8.0.1)
+  rails-i18n
   rubocop-rails
   rubocop-rails-omakase
   selenium-webdriver

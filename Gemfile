@@ -36,6 +36,8 @@ gem 'bootsnap', require: false
 # Deploy this application anywhere as a Docker container [https://kamal-deploy.org]
 gem 'kamal', require: false
 
+# I18n localizations
+gem 'rails-i18n'
 # Sentry error tracking and monitoring (sentry.io)
 gem 'sentry-rails'
 gem 'sentry-ruby'
@@ -77,6 +79,7 @@ end
 
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
+  gem 'i18n-debug'
   gem 'web-console'
 end
 
